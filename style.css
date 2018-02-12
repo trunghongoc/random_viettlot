@@ -1,0 +1,48 @@
+.con-so-may-man {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 50%;
+  border: 6px solid red;
+}
+.con-so-may-man p {
+  line-height: 88px;
+  color: red;
+  font-size: 36px;
+  font-weight: bold;
+}
+.mr-t-60 {
+  margin-top: 60px;
+}
+.so-than-tai {
+  width: 55px;
+  height: 55px;
+  border: 2px solid red;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.so-than-tai p {
+  line-height: 51px;
+  color: red;
+  font-size: 26px;
+  font-weight: bold;
+}
+.dong {
+  background: #eee;
+  padding: 12px 0;
+  margin-top: 12px;
+}
+.dong:first-child {
+  margin-top: 0;
+}
+.dong-gray {
+  background: #34495e
+}
+.dong-gray .so-than-tai {
+  border: 2px solid #fff;
+}
+.dong-gray .so-than-tai p {
+  color: #fff;
+}

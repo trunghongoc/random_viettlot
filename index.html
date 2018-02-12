@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Tỉ phú jackpot 1</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1 class="text-center">
+              Con số may mắn
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="so1 con-so-may-man">
+                  <p>22</p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="so2 con-so-may-man">
+                  <p>22</p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="so3 con-so-may-man">
+                  <p>22</p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="so4 con-so-may-man">
+                  <p>22</p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="so5 con-so-may-man">
+                  <p>22</p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="so6 con-so-may-man">
+                  <p>22</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mr-t-60 text-center">
+                    <button class="btn btn-primary lay-ngay-giai-thuong">CLick để  lấy dãy số bí mật trúng giải đặc biệt :3</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1 class="text-center">
+              Oánh những con số sau để sở hữu 300 tỉ ))
+            </h1>
+          </div>
+          <div class="panel-body">
+            <div class="day-so">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var gray = true
+    $(document).ready(function(){
+      $(".lay-ngay-giai-thuong").click(function(){
+        let day = []
+        let so1 = conSoMayMan(), so2, so3, so4, so5, so6
+        day.push(so1)
+        so2 = conSoMayMan()
+        while(day.includes(so2))
+          so2 = conSoMayMan()
+        day.push(so2)
+
+        so3 = conSoMayMan()
+        while(day.includes(so3))
+          so3 = conSoMayMan()
+        day.push(so3)
+
+        so4 = conSoMayMan()
+        while(day.includes(so4))
+          so4 = conSoMayMan()
+        day.push(so4)
+
+        so5 = conSoMayMan()
+        while(day.includes(so5))
+          so5 = conSoMayMan()
+        day.push(so5)
+
+        so6 = conSoMayMan()
+        while(day.includes(so6))
+          so6 = conSoMayMan()
+        day.push(so6)
+
+        day.sort(function(a, b) {
+          return a - b
+        })
+
+        so1 = day[0]
+        so2 = day[1]
+        so3 = day[2]
+        so4 = day[3]
+        so5 = day[4]
+        so6 = day[5]
+
+        so1 = so1 < 10 ? "0" + so1 : so1
+        so2 = so2 < 10 ? "0" + so2 : so2
+        so3 = so3 < 10 ? "0" + so3 : so3
+        so4 = so4 < 10 ? "0" + so4 : so4
+        so5 = so5 < 10 ? "0" + so5 : so5
+        so6 = so6 < 10 ? "0" + so6 : so6
+
+        $(".so1 p").text(so1)
+        $(".so2 p").text(so2)
+        $(".so3 p").text(so3)
+        $(".so4 p").text(so4)
+        $(".so5 p").text(so5)
+        $(".so6 p").text(so6)
+        render(so1, so2, so3, so4, so5, so6)
+      })
+    })
+
+    function conSoMayMan(min = 1, max = 55) {
+      return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    function render(so1, so2, so3, so4, so5, so6) {
+      gray = !gray
+      let html = '<div class="dong ' + (gray ? "dong-gray" : "") + '">' +
+        '<div class="row">' +
+          '<div class="col-md-2">' +
+            '<div class="so-than-tai">' +
+              '<p>' + so1 + '</p>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="col-md-2">' +
+            '<div class="so-than-tai">' +
+              '<p>' + so2 + '</p>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="col-md-2">' +
+            '<div class="so-than-tai">' +
+              '<p>' + so3 + '</p>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="col-md-2">' +
+            '<div class="so-than-tai">' +
+              '<p>' + so4 + '</p>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="col-md-2">' +
+            '<div class="so-than-tai">' +
+              '<p>' + so5 + '</p>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="col-md-2">' +
+            '<div class="so-than-tai">' +
+              '<p>' + so6 + '</p>' +
+            '</div>' +
+          '</div>' +
+
+        '</div>' +
+      '</div>'
+      $(".day-so").prepend(html)
+    }
+  </script>
+</body>
+</html>
